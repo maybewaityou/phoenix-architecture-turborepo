@@ -11,6 +11,12 @@ importers:
       '@changesets/cli':
         specifier: ^2.26.2
         version: 2.26.2
+      '@commitlint/cli':
+        specifier: ^17.6.7
+        version: 17.6.7
+      '@commitlint/config-conventional':
+        specifier: ^17.6.7
+        version: 17.6.7
       '@turbo/gen':
         specifier: ^1.9.7
         version: 1.9.7(@types/node@20.4.2)(typescript@5.0.2)
