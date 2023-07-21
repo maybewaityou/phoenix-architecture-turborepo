@@ -1,4 +1,12 @@
-import { Button, Header } from "ui";
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ *
+ * description:
+ *
+ */
+
+import { Button, Header } from 'ui'
 
 export default function Page() {
   return (
@@ -6,5 +14,5 @@ export default function Page() {
       <Header text="Web" />
       <Button />
     </>
-  );
+  )
 }

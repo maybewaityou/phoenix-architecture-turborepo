@@ -1,5 +1,11 @@
-import * as React from "react";
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ *
+ * description:
+ *
+ */
 
 // component exports
-export * from "./Button";
-export * from "./Header";
+export * from './Button'
+export * from './Header'
