@@ -8,7 +8,12 @@
     "dev": "npm run build -- --watch"
   },
   "dependencies": {
-    "fp-ts": "^2.16.0",
-    "typescript": "latest"
+    "fp-ts": "^2.16.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^4.5.2"
   }
 }
