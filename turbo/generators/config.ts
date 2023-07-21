@@ -29,11 +29,9 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         }
 
         const directory = path.join(
-          // resolves to the root of the current workspace
           plop.getDestBasePath(),
-          '__tests__',
-          '__fixtures__',
-          answers.name
+          `packages/${answers.name}/test`,
+          'fixtures'
         )
         fs.mkdirSync(directory)
 
