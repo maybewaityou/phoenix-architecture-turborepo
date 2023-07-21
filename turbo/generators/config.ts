@@ -23,6 +23,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       },
       {
         type: 'add',
+        path: 'packages/{{name}}/LICENSE',
+        templateFile: 'templates/LICENSE'
+      },
+      {
+        type: 'add',
         path: 'packages/{{name}}/package.json',
         templateFile: 'templates/package.json.hbs'
       },
