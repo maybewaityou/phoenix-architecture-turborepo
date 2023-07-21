@@ -21,7 +21,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       {
         type: 'add',
         path: 'packages/{{name}}/test/index.spec.ts',
-        templateFile: 'packages/{{name}}/test/index.spec.hbs'
+        templateFile: 'templates/test/index.spec.hbs'
       },
       function createFixturesDirectory(answers: { name?: string }) {
         if (!answers.name) {
