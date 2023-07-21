@@ -5,19 +5,39 @@
  * description:
  *
  */
-import { assert, describe, expect, it } from 'vitest'
+import { match } from 'fp-ts/Either'
+import { pipe } from 'fp-ts/function'
+import { describe, expect, it } from 'vitest'
+import { delay, to, toE } from '../src/index'
 
-describe('suite name', () => {
-  it('foo', () => {
-    expect(1 + 1).toEqual(2)
+function promise() {
+  return new Promise((resolve) => resolve(true))
+}
+
+describe('async suite', () => {
+  it('test [delay] function', async () => {
+    await delay(1000)
     expect(true).to.be.true
   })
 
-  it('bar', () => {
-    assert.equal(Math.sqrt(4), 2)
+  it('test [to] function', async () => {
+    const [error, result] = await to(promise())
+    expect(error).to.be.null
+    expect(result).to.be.true
   })
 
-  it('snapshot', () => {
-    expect({ foo: 'bar' }).toMatchSnapshot()
+  it('test [toE] function', async () => {
+    const result = await toE(promise())
+    pipe(
+      result,
+      match(
+        (error) => {
+          expect(error).to.be.null
+        },
+        (data) => {
+          expect(data).to.be.true
+        }
+      )
+    )
   })
 })
