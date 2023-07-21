@@ -44,6 +44,9 @@ importers:
       turbo:
         specifier: latest
         version: 1.10.9
+      typescript:
+        specifier: ^5.0.2
+        version: 5.0.2
 
   apps/web-next:
     dependencies:
