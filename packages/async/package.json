@@ -1,0 +1,13 @@
+{
+  "name": "async",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts",
+    "dev": "npm run build -- --watch"
+  },
+  "dependencies": {
+    "fp-ts": "^2.16.0",
+    "typescript": "latest"
+  }
+}
