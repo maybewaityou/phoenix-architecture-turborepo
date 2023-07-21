@@ -5,14 +5,26 @@
  * description:
  *
  */
+'use client'
 
-import { Button, Header } from 'ui'
+import { delay } from 'async'
+import { useState } from 'react'
+import { Header } from 'ui'
 
 export default function Page() {
+  const [state, setState] = useState(0)
+
+  async function handleClick() {
+    await delay(1000)
+    setState(state + 1)
+  }
+
   return (
     <>
       <Header text="Web" />
-      <Button />
+      {/* <Button /> */}
+      <div>{state}</div>
+      <button onClick={handleClick}>button</button>
     </>
   )
 }
