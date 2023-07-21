@@ -7,8 +7,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       {
         type: 'input',
         name: 'name',
-        message: 'name for the vendor (example: "shared-utils")',
-        default: ''
+        message: 'name for the vendor (example: "shared-utils")'
       }
     ],
     actions: [
