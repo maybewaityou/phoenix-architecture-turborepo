@@ -9,7 +9,7 @@
     "lint-staged": "lint-staged",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,cjs,md}\"",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish",
     "prepare": "husky install"
   },

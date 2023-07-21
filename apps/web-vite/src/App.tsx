@@ -1,3 +1,10 @@
+/**
+ * Created by MeePwn
+ * https://github.com/maybewaityou
+ *
+ * description:
+ *
+ */
 import { useState } from 'react'
 import { delay } from 'shared-utils'
 import './App.css'
