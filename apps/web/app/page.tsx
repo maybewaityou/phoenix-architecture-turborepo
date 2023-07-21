@@ -15,7 +15,6 @@ export default function Page() {
   const [state, setState] = useState(0)
 
   async function handleClick() {
-    console.log('=========', state)
     await delay(1000)
     setState(state + 1)
   }
