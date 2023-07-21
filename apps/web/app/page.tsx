@@ -7,8 +7,8 @@
  */
 'use client'
 
-import { delay } from 'async'
 import { useState } from 'react'
+import { delay } from 'shared-utils'
 import { Header } from 'ui'
 
 export default function Page() {
