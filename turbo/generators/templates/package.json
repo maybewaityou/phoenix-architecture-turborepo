@@ -1,0 +1,31 @@
+{
+  "name": "{{ name }}",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "dev": "npm run build -- --watch",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maybewaityou/phoenix-architecture-turborepo.git"
+  },
+  "author": "MeePwn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maybewaityou/phoenix-architecture-turborepo/issues"
+  },
+  "homepage": "https://github.com/maybewaityou/phoenix-architecture-turborepo#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.0.2",
+    "vitest": "^0.33.0"
+  }
+}
