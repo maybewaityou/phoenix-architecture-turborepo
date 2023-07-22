@@ -11,7 +11,7 @@ import { describe, expect, it } from 'vitest'
 import { delay, to, toE } from '../src/index'
 
 function promise() {
-  return new Promise((resolve) => resolve(true))
+  return new Promise((resolve, reject) => resolve(true))
 }
 
 describe('async suite', () => {
@@ -27,9 +27,9 @@ describe('async suite', () => {
   })
 
   it('test [toE] function', async () => {
-    const result = await toE(promise())
+    const resultE = await toE(promise())
     pipe(
-      result,
+      resultE,
       match(
         (error) => {
           expect(error).to.be.null
