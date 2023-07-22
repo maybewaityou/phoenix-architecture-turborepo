@@ -10,6 +10,7 @@
 - [安装](#安装)
 - [使用说明](#使用说明)
 - [示例](#示例)
+- [API](#API)
 - [维护者](#维护者)
 - [License](#license)
 
@@ -79,6 +80,10 @@ async function toEUseCase() {
 ## 示例
 
 想了解我们建议的规范是如何被应用的, 请参考 [examples](examples/).
+
+## API
+
+### async 模块
 
 ## 维护者
 
