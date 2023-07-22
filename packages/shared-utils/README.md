@@ -42,7 +42,38 @@ pnpm add shared-utils --registry=http://proxy.climb2fame.com:4873
 ### async 模块
 
 ```typescript
+// delay
+async function delayUseCase() {
+  console.log('asyncFunc start')
+  await delay(1000)
+  console.log('asyncFunc end')
+}
 
+// to
+async function toUseCase() {
+  const [error, result] = await to(promise())
+  console.log(`== error ===>>>> ${error}`)
+  console.log(`== result ===>>>> ${result}`)
+}
+
+// toE
+async function toEUseCase() {
+  const resultE = await toE(promise())
+  const result = pipe(
+    resultE,
+    match(
+      (error) => {
+        console.log(`== error ===>>>> ${error}`)
+        return error
+      },
+      (data) => {
+        console.log(`== data ===>>>> ${data}`)
+        return data
+      }
+    )
+  )
+  console.log(result) // data or error
+}
 ```
 
 ## 示例
