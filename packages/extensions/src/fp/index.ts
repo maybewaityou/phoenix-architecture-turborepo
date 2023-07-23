@@ -9,38 +9,38 @@ import type { Either } from 'fp-ts/Either'
 import { getOrElse as getOrElseF, match as matchF } from 'fp-ts/Either'
 import { pipe } from 'fp-ts/function'
 
-export function get<E, T>(result: Either<E, T>): T {
+export function get<L, R>(result: Either<L, R>): R {
   const target = getOrElse(result, null)
   if (target === null) throw Error('no value error')
   return target
 }
 
-export function getLeft<T, E>(result: Either<E, T>): E {
+export function getLeft<L, R>(result: Either<L, R>): L {
   return pipe(
-    result as Either<E, never>,
+    result as Either<L, never>,
     getOrElseF((error) => error)
   )
 }
 
-export function getOrElse<E, T>(result: Either<E, T>, defaultValue: T): T {
+export function getOrElse<L, R>(result: Either<L, R>, defaultValue: R): R {
   return pipe(
     result,
     getOrElseF(() => defaultValue)
   )
 }
 
-export function match<E, T, B>(
-  result: Either<E, T>,
-  onLeft: (e: E) => B,
-  onRight: (a: T) => B
-): B {
+export function match<L, R, T>(
+  result: Either<L, R>,
+  onLeft: (e: L) => T,
+  onRight: (a: R) => T
+): T {
   return pipe(result, matchF(onLeft, onRight))
 }
 
-export function fold<E, T, B>(
-  result: Either<E, T>,
-  onLeft: (e: E) => B,
-  onRight: (a: T) => B
-): B {
+export function fold<L, R, T>(
+  result: Either<L, R>,
+  onLeft: (e: L) => T,
+  onRight: (a: R) => T
+): T {
   return match(result, onLeft, onRight)
 }
