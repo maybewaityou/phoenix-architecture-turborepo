@@ -51,6 +51,10 @@ const result = get(resultE)
 const resultE = left(Error('error'))
 const result = getLeft(resultE)
 
+// 显式获取 Either 中的值, 如果 Either 为 Left, 则获取 defaultValue
+const resultE = left(Error('error'))
+const result = getOrElse(resultE, false)
+
 // 模式匹配, 对 Either 对象进行展开
 const resultE = right(true)
 match(
