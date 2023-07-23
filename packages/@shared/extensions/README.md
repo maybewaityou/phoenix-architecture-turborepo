@@ -1,0 +1,63 @@
+# @shared/extensions
+
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+[[项目描述]]
+
+## 内容列表
+
+- [背景](#背景)
+- [安装](#安装)
+- [使用说明](#使用说明)
+- [示例](#示例)
+- [API](#API)
+- [维护者](#维护者)
+- [License](#license)
+
+## 背景
+
+[[项目背景]]
+
+## 安装
+
+使用 **npm** 进行安装:
+
+```shell
+npm install @shared/extensions --registry=http://proxy.climb2fame.com:4873
+```
+
+或者使用 **yarn** 进行安装:
+
+```shell
+yarn add @shared/extensions --registry=http://proxy.climb2fame.com:4873
+```
+
+或者使用 **pnpm** 进行安装:
+
+```shell
+pnpm add @shared/extensions --registry=http://proxy.climb2fame.com:4873
+```
+
+## 使用说明
+
+### [[模块说明]]
+
+```typescript
+
+```
+
+## 示例
+
+想了解我们建议的规范是如何被应用的, 请参考 [examples](examples/).
+
+## API
+
+### [[模块说明]]
+
+## 维护者
+
+[@MeePwn](https://github.com/maybewaityou).
+
+## License
+
+[MIT © MeePwn.](LICENSE)

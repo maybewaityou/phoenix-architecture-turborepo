@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "@shared/extensions",
   "version": "0.0.1",
   "description": "",
   "type": "module",
