@@ -5,8 +5,8 @@
  * description:
  *
  */
+import { delay } from '@shared/utils'
 import { useState } from 'react'
-import { delay } from 'shared-utils'
 import './App.css'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'

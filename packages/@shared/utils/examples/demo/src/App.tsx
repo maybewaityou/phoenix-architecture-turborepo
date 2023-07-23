@@ -5,10 +5,10 @@
  * description:
  *
  */
+import { delay, to, toE } from '@shared/utils'
 import { match } from 'fp-ts/Either'
 import { pipe } from 'fp-ts/function'
 import { useState } from 'react'
-import { delay, to, toE } from 'shared-utils'
 import './App.css'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'

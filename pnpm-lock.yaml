@@ -65,9 +65,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      shared-utils:
+      @shared/utils:
         specifier: workspace:*
-        version: link:../../packages/shared-utils
+        version: link:../../packages/@shared/utils
     devDependencies:
       '@types/react':
         specifier: ^18.2.15
@@ -115,7 +115,7 @@ importers:
         specifier: 7.28.0
         version: 7.28.0(eslint@8.45.0)
 
-  packages/shared-utils:
+  packages/@shared/utils:
     dependencies:
       fp-ts:
         specifier: ^2.16.0

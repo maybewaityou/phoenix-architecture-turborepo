@@ -23,19 +23,19 @@
 使用 **npm** 进行安装:
 
 ```shell
-npm install shared-utils --registry=http://proxy.climb2fame.com:4873
+npm install @shared/utils --registry=http://proxy.climb2fame.com:4873
 ```
 
 或者使用 **yarn** 进行安装:
 
 ```shell
-yarn add shared-utils --registry=http://proxy.climb2fame.com:4873
+yarn add @shared/utils --registry=http://proxy.climb2fame.com:4873
 ```
 
 或者使用 **pnpm** 进行安装:
 
 ```shell
-pnpm add shared-utils --registry=http://proxy.climb2fame.com:4873
+pnpm add @shared/utils --registry=http://proxy.climb2fame.com:4873
 ```
 
 ## 使用说明
