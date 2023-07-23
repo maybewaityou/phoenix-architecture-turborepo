@@ -2,7 +2,7 @@
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-[[项目描述]]
+项目通用类扩展库, 包含函数式编程库(fp-ts)等.
 
 ## 内容列表
 
@@ -16,7 +16,7 @@
 
 ## 背景
 
-[[项目背景]]
+项目通用类扩展库, 对第三方库进行简单封装, 使方法/函数调用更加优雅, 只需维护一份代码即可, 其他项目直接引入.
 
 ## 安装
 
@@ -40,7 +40,7 @@ pnpm add @shared/extensions --registry=http://proxy.climb2fame.com:4873
 
 ## 使用说明
 
-### [[模块说明]]
+### fp 模块
 
 ```typescript
 
@@ -52,7 +52,13 @@ pnpm add @shared/extensions --registry=http://proxy.climb2fame.com:4873
 
 ## API
 
-### [[模块说明]]
+### fp 模块
+
+| 名称 | 注释 | 参数 | 返回值 | 示例 |
+| ---- | ---- | ---- | ------ | ---- |
+|      |      |      |        |      |
+|      |      |      |        |      |
+|      |      |      |        |      |
 
 ## 维护者
 
