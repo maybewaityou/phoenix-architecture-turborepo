@@ -29,17 +29,17 @@ export function getOrElse<E, T>(result: Either<E, T>, defaultValue: T): T {
   )
 }
 
-export function match<T, B>(
-  result: Either<Error, T>,
-  onLeft: (e: Error) => B,
+export function match<E, T, B>(
+  result: Either<E, T>,
+  onLeft: (e: E) => B,
   onRight: (a: T) => B
 ): B {
   return pipe(result, matchF(onLeft, onRight))
 }
 
-export function fold<T, B>(
-  result: Either<Error, T>,
-  onLeft: (e: Error) => B,
+export function fold<E, T, B>(
+  result: Either<E, T>,
+  onLeft: (e: E) => B,
   onRight: (a: T) => B
 ): B {
   return match(result, onLeft, onRight)
