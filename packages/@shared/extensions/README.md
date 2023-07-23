@@ -76,12 +76,12 @@ match(
 
 ### fp 模块
 
-| 名称       | 注释                             | 参数                                   | 返回值 | 示例 |
-| ---------- | -------------------------------- | -------------------------------------- | ------ | ---- |
-| get        | 显式获取 Either 中的 Right 值    | Either<E, T>                           | T      |      |
-| getLeft    | 显式获取 Either 中的 Left 值     | Either<E, T>                           | E      |      |
-| getOrElse  | 显式获取 Either 中的值           | Either<E, T>, defaultValue: T          | T      |      |
-| match/fold | 模式匹配, 对 Either 对象进行展开 | Either<E, T>, (e: E) => B, (a: T) => B | B      |      |
+| 名称       | 注释                             | 参数                                   | 返回值 | 示例                                                         |
+| ---------- | -------------------------------- | -------------------------------------- | ------ | ------------------------------------------------------------ |
+| get        | 显式获取 Either 中的 Right 值    | Either<E, T>                           | T      | get(right(1))                                                |
+| getLeft    | 显式获取 Either 中的 Left 值     | Either<E, T>                           | E      | getLeft(left(Error('error')))                                |
+| getOrElse  | 显式获取 Either 中的值           | Either<E, T>, defaultValue: T          | T      | getOrElse(left(Error('error')), false)                       |
+| match/fold | 模式匹配, 对 Either 对象进行展开 | Either<E, T>, (e: E) => B, (a: T) => B | B      | match(<br/>  right(true),<br/>  (error) => {},<br/>  (data) => {}<br/>) |
 
 ## 维护者
 
