@@ -43,7 +43,25 @@ pnpm add @shared/extensions --registry=http://proxy.climb2fame.com:4873
 ### fp 模块
 
 ```typescript
+// 显式获取 Either 中的 Right 值
+const resultE = right(1)
+const result = get(resultE)
 
+// 显式获取 Either 中的 Left 值
+const resultE = left(Error('error'))
+const result = getLeft(resultE)
+
+// 模式匹配, 对 Either 对象进行展开
+const resultE = right(true)
+match(
+  resultE,
+  (error) => {
+    // left
+  },
+  (data) => {
+    // right
+  }
+)
 ```
 
 ## 示例
