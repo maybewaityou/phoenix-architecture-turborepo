@@ -5,3 +5,5 @@
  * description:
  *
  */
+
+export * from './fp'
