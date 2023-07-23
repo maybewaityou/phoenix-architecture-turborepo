@@ -9,20 +9,20 @@ import type { Either } from 'fp-ts/Either'
 import { getOrElse as getOrElseF, match as matchF } from 'fp-ts/Either'
 import { pipe } from 'fp-ts/function'
 
-export function get<T>(result: Either<Error, T>): T {
+export function get<E, T>(result: Either<E, T>): T {
   const target = getOrElse(result, null)
   if (target === null) throw Error('no value error')
   return target
 }
 
-export function getLeft<T>(result: Either<Error, T>): Error {
+export function getLeft<T, E>(result: Either<E, T>): E {
   return pipe(
-    result as Either<Error, never>,
+    result as Either<E, never>,
     getOrElseF((error) => error)
   )
 }
 
-export function getOrElse<T>(result: Either<Error, T>, defaultValue: T): T {
+export function getOrElse<E, T>(result: Either<E, T>, defaultValue: T): T {
   return pipe(
     result,
     getOrElseF(() => defaultValue)

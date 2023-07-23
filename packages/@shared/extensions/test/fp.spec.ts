@@ -7,7 +7,7 @@
  */
 import { left, right } from 'fp-ts/Either'
 import { describe, expect, it } from 'vitest'
-import { get, getLeft, match } from '../src/index'
+import { get, getLeft, getOrElse, match } from '../src/index'
 
 describe('fp suite', () => {
   it('test [get] function', () => {
@@ -20,6 +20,12 @@ describe('fp suite', () => {
     const resultE = left(Error('error'))
     const result = getLeft(resultE)
     expect(result.message).to.be.equal('error')
+  })
+
+  it('test [getOrElse] function', () => {
+    const resultE = left(Error('error'))
+    const result = getOrElse(resultE, false)
+    expect(result).to.be.false
   })
 
   it('test [match] function', () => {
