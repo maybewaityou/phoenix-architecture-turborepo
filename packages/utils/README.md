@@ -85,11 +85,11 @@ async function toEUseCase() {
 
 ### async 模块
 
-| 名称  | 注释                          | 参数       | 返回值           | 示例                                                    |
-| ----- | ----------------------------- | ---------- | ---------------- | ------------------------------------------------------- |
-| delay | 延时执行                      | number     | Promise<void>    | await delay(1000)                                       |
-| to    | 将 Promise 转为数组(长度为 2) | Promise<T> | [Error, T]       | const [error, result] = await to(Promise.resolve(true)) |
-| toE   | 将 Promise 转为 Either 对象   | Promise<T> | Either<Error, T> | const resultE = await toE(Promise.resolve(true))        |
+| **名称** | **注释**                      | **参数**   | **返回值**       | **示例**                                                |
+| -------- | ----------------------------- | ---------- | ---------------- | ------------------------------------------------------- |
+| delay    | 延时执行                      | number     | Promise<void>    | await delay(1000)                                       |
+| to       | 将 Promise 转为数组(长度为 2) | Promise<T> | [Error, T]       | const [error, result] = await to(Promise.resolve(true)) |
+| toE      | 将 Promise 转为 Either 对象   | Promise<T> | Either<Error, T> | const resultE = await toE(Promise.resolve(true))        |
 
 ## 维护者
 
