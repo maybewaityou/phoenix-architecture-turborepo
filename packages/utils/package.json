@@ -29,7 +29,8 @@
   "homepage": "https://github.com/maybewaityou/phoenix-architecture-turborepo#readme",
   "dependencies": {
     "consola": "^3.2.3",
-    "fp-ts": "^2.16.0"
+    "fp-ts": "^2.16.0",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
