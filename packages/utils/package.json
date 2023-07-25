@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/maybewaityou/phoenix-architecture-turborepo#readme",
   "dependencies": {
+    "consola": "^3.2.3",
     "fp-ts": "^2.16.0"
   },
   "devDependencies": {
