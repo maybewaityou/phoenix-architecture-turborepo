@@ -27,8 +27,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       },
       {
         type: 'add',
-        path: 'packages/{{name}}/test/index.spec.ts',
-        templateFile: 'templates/test/index.spec.hbs'
+        path: 'packages/{{name}}/__test__/index.spec.ts',
+        templateFile: 'templates/__test__/index.spec.hbs'
       },
       {
         type: 'add',
